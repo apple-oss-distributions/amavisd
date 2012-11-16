@@ -4,11 +4,11 @@
 
 #####################
 # amavisd temp directory
-AMAVISD_TMP_DIR="/var/amavis/tmp"
+AMAVISD_TMP_DIR="/Library/Server/Mail/Data/scanner/amavis/tmp"
 
 #####################
 # get the size of the temp directory
-SIZE=`du -d 0 -h /var/amavis/tmp/ | sed -n -e "s/[^0-9]*\([0-9]*\).*/\1/p"`
+SIZE=`du -d 0 -h /Library/Server/Mail/Data/scanner/amavis/tmp/ | sed -n -e "s/[^0-9]*\([0-9]*\).*/\1/p"`
 
 #####################
 # determine how may days to clean up based on size
@@ -31,7 +31,7 @@ fi
 # virus quarantine directory
 # always clean up viruses after 1 day
 
-AMAVISD_VIR_DIR="/var/virusmails"
+AMAVISD_VIR_DIR="/Library/Server/Mail/Data/scanner/virusmails"
 if [ -d $AMAVISD_VIR_DIR ]; then
 	cd $AMAVISD_VIR_DIR
 	find $AMAVISD_VIR_DIR -type d -atime +1 -exec rm -r {} \;

@@ -18,5 +18,7 @@
 	<string>_amavisd</string>
 	<key>StartInterval</key>
 	<integer>600</integer>
+	<key>PreventsSleep</key>
+	<true/>
 </dict>
 </plist>
