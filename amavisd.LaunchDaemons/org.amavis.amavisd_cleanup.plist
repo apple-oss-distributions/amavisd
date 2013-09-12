@@ -12,6 +12,10 @@
 	<array>
 		<string>amavisd_cleanup</string>
 	</array>
+	<key>StandardOutPath</key>
+	<string>/Library/Logs/Mail/amavis.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Library/Logs/Mail/amavis.log</string>
 	<key>ServiceIPC</key>
 	<false/>
 	<key>UserName</key>
